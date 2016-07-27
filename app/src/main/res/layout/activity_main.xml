@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainlayout"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.yecicen.songplay.MainActivity">
+
+    <!--                        SCORE LAYOUT                        -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/scorelabel">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/star256"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitCenter"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:text="167"/>
+    </LinearLayout>
+
+    <!--                        WELCOME LAYOUT                      -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/scorelabel"
+        android:layout_marginTop="15dp"
+        android:id="@+id/welcomelayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="@string/welcome"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="5dp"
+            android:text="@string/name"/>
+    </LinearLayout>
+
+    <!--                        LEVEL LAYOUT                        -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcomelayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/levellayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="@string/level"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="25sp"
+            android:textColor="@color/lightblue"
+            android:text="15"/>
+    </LinearLayout>
+
+    <!--                        LILY LAYOUT                     -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:id="@+id/lilylayout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/lily"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/lilyimage"/>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:id="@+id/talkingbubble"
+            android:layout_toEndOf="@+id/lilyimage"
+            android:layout_toRightOf="@+id/lilyimage"
+            android:src="@drawable/talkingbubble"/>
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/lilyimage"
+            android:layout_toRightOf="@+id/lilyimage"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/lilyspeech"
+            android:textSize="13sp"
+            android:text="@string/lorem"/>
+    </RelativeLayout>
+
+    <!--                                GRAPH                       -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/graphlayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/lilylayout">
+
+
+    </RelativeLayout>
+
+
+    <!--                        BUTTONS LAYOUT                      -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/graphlayout"
+        android:id="@+id/buttonslayout"
+        android:layout_marginTop="10dp"
+        >
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/arrowleft"
+            android:layout_marginRight="15dp"
+            android:textAlignment="gravity"
+            android:onClick="OpenGraph"
+            android:scaleType="fitCenter"/>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/playbutton"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/play"
+            android:scaleType="fitCenter"
+            />
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/recordbutton"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="15dp"/>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/arrowright"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+    <!--                        ACTION TEXT                     -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/buttonslayout"
+        android:id="@+id/actiontext"
+        android:layout_marginTop="10dp"
+        />
+
+
+</RelativeLayout>
+    <!--
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcomelayout"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/welcome"
+            android:id="@+id/welcometext"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/name"
+            android:id="@+id/nametext"
+            android:layout_marginLeft="10dp"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/levelLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/welcomelayout"
+        android:layout_marginTop="30dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/level"
+            android:textColor="@color/orange"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/orange"
+            android:text="15"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/levelLayout"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/graph"
+        android:background="@color/white"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView"
+        android:id="@+id/buttonslayout"
+        android:layout_marginTop="30dp"
+        >
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/lightblue"
+            android:src="@drawable/arrowleft"
+            android:layout_marginRight="15dp"
+            android:textAlignment="gravity"
+            android:scaleType="fitCenter"/>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/playbutton"
+            android:background="@color/lightblue"
+            android:src="@drawable/play"
+            android:scaleType="fitCenter"
+             />
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/recordbutton"
+            android:background="@color/lightblue"
+            android:scaleType="fitCenter"
+            android:src="@drawable/micro"
+            android:layout_marginLeft="15dp"/>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/lightblue"
+            android:src="@drawable/arrowright"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/actiontext"
+        android:layout_below="@+id/buttonslayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/playing"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actiontext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/score"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="167"/>
+    </LinearLayout>
+
+-->
+
